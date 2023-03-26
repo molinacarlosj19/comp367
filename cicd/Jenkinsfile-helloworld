@@ -30,7 +30,7 @@ pipeline {
                     docker.withRegistry('https://registry.hub.docker.com', 'docker_credential') {
                         docker.image("molinacarlosj/comp367:${TAG}").push()
                         docker.image("molinacarlosj/comp367:${TAG}").push("latest")
-                    }
+                    }	
                 }
             }
         }
