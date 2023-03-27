@@ -33,10 +33,10 @@ pipeline {
             }
         }
         
-        stage('Docker Login!') {
+        stage('Docker Login') {
             steps {
                script {
-                   sh 'docker login -u molinacarlosj -p Dejesus28%%%}'
+                   sh 'docker login -u molinacarlosj -p ${DOCKERHUB_PWD}'
                }
             }
         }
